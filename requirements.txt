@@ -1,2 +1,4 @@
 cocos2d==0.6.4
 numpy==1.12.1
+jinja2==2.9.6
+pyyaml==3.12

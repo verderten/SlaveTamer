@@ -155,4 +155,5 @@ pip-selfcheck.json
 /Общая карта.mmap
 /Общая карта.xmind
 /samples/
-/assets/
+/assets/audio/*
+/assets/images/*

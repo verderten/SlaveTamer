@@ -1,0 +1,8 @@
+textdb:
+  locale: "ru-ru"
+  priority: 1
+  strings:
+    hello_w: "Привет мир!"
+    hello_w_multi: |
+      Привет
+      мир!

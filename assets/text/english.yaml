@@ -1,0 +1,16 @@
+textdb:
+  locale: "en-us"
+  priority: 1
+  strings:
+    hello_w: "Hello world!"
+    hello_w_multi: |
+      hello
+      world!
+    hello_template: |
+      Oh hi {bold True}{{textdb.hello_w}}{{mimi}}{bold False}
+---
+textdb:
+  locale: "en-us"
+  priority: 2
+  strings:
+    hella_w: "Hella warld!"

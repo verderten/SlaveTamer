@@ -1,9 +1,13 @@
 import os, sys
 import cocos
+from glob import glob
 import pyglet
 
 from source.scenes import *
 from source.layers import *
+from source.text import TextStorage
+
+TextStorage(locale='en-us').bulk_load(glob('./assets/text/*.yaml'))
 
 pyglet.lib.load_library('avbin')
 pyglet.options['audio'] = ('openal', 'silent')
