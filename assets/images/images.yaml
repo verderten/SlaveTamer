@@ -1,0 +1,8 @@
+imagedb:
+  locale: "en-us"
+  priority: 1
+  images:
+    empty: "empty.png"
+    mainmenu_wallpaper: "wall.jpg"
+  atlases:
+    gui: "images.atlas"

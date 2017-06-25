@@ -1,9 +1,10 @@
+import jinja2
 import yaml
 import logging
 
 
 class TextStorage:
-    #id->locale->{priority:num, string:str}
+    # id->locale->{priority:num, string:str}
     _db = {}
 
     def __init__(self, locale, default_locale='en-us'):
@@ -11,14 +12,23 @@ class TextStorage:
         self._def_locale = default_locale
 
     def __getattr__(self, item):
-        if item in self._db:
-            if self._locale in self._db[item]:
-                return self._db[item][self._locale]['string']
+        return self.get(item)
 
-            elif self._def_locale in self._db[item]:
-                return self._db[item][ self._def_locale]['string']
+    def get(self, templ_id, **kwargs):
+        template = None
 
-        return str(item)
+        if templ_id in self._db:
+            if self._locale in self._db[templ_id]:
+                template = self._db[templ_id][self._locale]['string']
+
+            elif self._def_locale in self._db[templ_id]:
+                template = self._db[templ_id][self._def_locale]['string']
+
+        if template:
+            template = jinja2.Template(template)
+            return template.render(textdb=TextStorage('en-us'), **kwargs)
+        else:
+            return templ_id
 
     def bulk_load(self, path_glob):
         """
@@ -45,7 +55,6 @@ class TextStorage:
                             # if locale exists, select string with greater prio
                             if locale in self._db[k]:
                                 if self._db[k][locale]['priority'] < priority:
-
                                     self._db[k][locale] = dict(
                                         priority=priority, string=v)
                         else:

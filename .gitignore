@@ -157,3 +157,8 @@ pip-selfcheck.json
 /samples/
 /assets/audio/*
 /assets/images/*
+.designer
+!/levels/scripts/
+!/assets/audio/music.yaml
+!/assets/images/images.yaml
+!/assets/images/images.atlas

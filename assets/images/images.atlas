@@ -1,0 +1,8 @@
+{
+    "gui-0.png": {
+        "button_normal": [15, 480, 283, 57],
+        "button_down": [15, 402, 283, 57],
+        "button_active": [15, 324, 283, 57],
+        "button_disabled": [15, 245, 283, 57]
+    }
+}

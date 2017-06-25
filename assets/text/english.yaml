@@ -2,12 +2,12 @@ textdb:
   locale: "en-us"
   priority: 1
   strings:
-    hello_w: "Hello world!"
-    hello_w_multi: |
-      hello
-      world!
+    new_game: "New game"
+    load_game: "Load game"
+    main_settings: "Settings"
+    main_menu_quit: "Quit"
     hello_template: |
-      Oh hi {bold True}{{textdb.hello_w}}{{mimi}}{bold False}
+      Oh hi [b] {{textdb.hello_w}}{{mimi}} [/b]
 ---
 textdb:
   locale: "en-us"

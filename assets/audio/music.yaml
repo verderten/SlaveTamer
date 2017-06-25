@@ -1,0 +1,5 @@
+sounddb:
+  locale: "en-us"
+  priority: 1
+  sounds:
+    main_menu: "border.ogg"

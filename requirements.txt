@@ -1,4 +1,6 @@
-cocos2d==0.6.4
+kivy==1.10.0
 numpy==1.12.1
 jinja2==2.9.6
 pyyaml==3.12
+pygame==1.9.3
+cython==0.25.2
