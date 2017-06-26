@@ -16,7 +16,7 @@ from engine.config import ConfigManager
 from levels import *
 
 
-conf = ConfigManager('slavetamer').bulk_load(glob('./levels/config/*.yaml'))
+conf = ConfigManager('mainapp').bulk_load(glob('./levels/config/*.yaml'))
 
 TextStorage(locale=conf.app__locale).bulk_load(glob('./assets/text/*.yaml'))
 AudioStorage(locale=conf.app__locale).bulk_load(glob('./assets/audio/*.yaml'))
@@ -24,7 +24,7 @@ ImageStorage(locale=conf.app__locale).bulk_load(glob('./assets/images/*.yaml'))
 ScriptLoader().bulk_load(glob('./levels/scripts/*.kv'))
 
 
-class SlaveTamerApp(App):
+class MainApp(App):
     def __init__(self):
         self.conf = ConfigManager()
         super().__init__()
@@ -66,4 +66,4 @@ class SlaveTamerApp(App):
         self.conf.apply_user_setting(section, key, value)
 
 if __name__ == '__main__':
-    SlaveTamerApp().run()
+    MainApp().run()

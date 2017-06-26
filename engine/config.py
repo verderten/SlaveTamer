@@ -1,5 +1,5 @@
 from os import path
-from glob import glob
+import os
 import yaml
 import json
 
@@ -105,6 +105,12 @@ class ConfigManager:
         """
         Open handler to user settings. If none, write template
         """
+        if not path.exists(self.user_data_dir):
+            os.makedirs(self.user_data_dir, exist_ok=True)
+
+        if not path.exists(self._userconf_full_path):
+            self.init_user_settings()
+
         with open(self._userconf_full_path, mode='r') as file:
             settings = yaml.load(file.read())
             if not settings:
