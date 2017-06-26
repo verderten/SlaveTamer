@@ -1,0 +1,23 @@
+appconf:
+  tab: 'Appearance'
+  title: 'Application graphics'
+  defaults:
+    app:
+      locale: 'en-us'
+    graphics:
+      fullscreen: True
+  content:
+    graphics:
+      -  {
+          "type": "bool",
+          "title": "Fullscreen",
+          "desc": "Set the window in windowed or fullscreen",
+          "key": "fullscreen",
+          }
+
+    app:
+      -    {'type': 'options',
+           'title': 'Language',
+           'desc': 'Preferred language for interface and dialogs',
+           'key': 'locale',
+           'options': ['en-us', 'ru-ru']}

@@ -2,7 +2,9 @@ textdb:
   locale: "ru-ru"
   priority: 1
   strings:
-    hello_w: "Привет мир!"
-    hello_w_multi: |
-      Привет
-      мир!
+    new_game: "Новая игра"
+    load_game: "Зарузить игру"
+    main_settings: "Настройки"
+    main_menu_quit: "Выйти"
+    hello_template: |
+      Oh hi [b] {{textdb.hello_w}}{{mimi}} [/b]

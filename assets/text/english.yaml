@@ -8,9 +8,3 @@ textdb:
     main_menu_quit: "Quit"
     hello_template: |
       Oh hi [b] {{textdb.hello_w}}{{mimi}} [/b]
----
-textdb:
-  locale: "en-us"
-  priority: 2
-  strings:
-    hella_w: "Hella warld!"

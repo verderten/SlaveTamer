@@ -15,8 +15,3 @@ class MenuScreen(Screen):
         :return:
         """
         sys.exit(0)
-
-
-class SettingsScreen(Screen):
-    pass
-

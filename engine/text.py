@@ -57,6 +57,10 @@ class TextStorage:
                                 if self._db[k][locale]['priority'] < priority:
                                     self._db[k][locale] = dict(
                                         priority=priority, string=v)
+                            else:
+                                self._db[k][locale] = dict(
+                                        priority=priority, string=v)
+
                         else:
                             self._db[k] = {locale: dict(priority=priority,
                                                         string=v)}

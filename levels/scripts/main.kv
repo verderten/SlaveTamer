@@ -6,14 +6,7 @@
     MenuScreen:
         name: 'menu'
         on_enter: app.audio.music('main_menu')
-    SettingsScreen:
-        name: 'settings'
 
-<Button>:
-    background_normal: app.img.button_normal
-    background_down: app.img.button_down
-    background_disabled_normal: app.img.button_disabled
-    background_disabled_down: app.img.button_disabled
 
 <MenuScreen>:
     canvas:
@@ -32,21 +25,12 @@
             orientation: 'vertical'
             Button:
                 text: app.text.new_game
-                on_press: root.manager.current = 'settings'
-
-
             Button:
                 text: app.text.load_game
             Button:
                 text: app.text.main_settings
+                on_release:
+                    app.open_settings()
             Button:
                 text: app.text.main_menu_quit
-                on_press: root.on_quit_button()
-
-<SettingsScreen>:
-    BoxLayout:
-        Button:
-            text: 'My settings button'
-        Button:
-            text: 'Back to menu'
-            on_press: root.manager.current = 'menu'
+                on_release: root.on_quit_button()
